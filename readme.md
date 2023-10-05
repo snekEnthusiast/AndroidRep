@@ -1,2 +1,4 @@
-Current tasks:
-Docker
+### completed tasks:
+
+### current tasks:
+- docker
