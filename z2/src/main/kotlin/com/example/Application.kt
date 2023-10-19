@@ -18,7 +18,8 @@ fun main() {
 
 fun Application.module() {
 	//create database
-	if(!File("/home/mikolaj/IdeaProjects/ktor-sample/data/data.db").exists()){
+	var filecheck = false
+	if(!File("/home/mikolaj/IdeaProjects/ktor-sample/data/data.db").exists() && filecheck){
 		throw Exception("project/build/db/data.db not found")
 	}
 	DatabaseFactory.init()
