@@ -10,4 +10,8 @@
     <td>ktor</td>
     <td>4.0</td>
   </tr>
+  <tr>
+    <td>calculator</td>
+    <td>5.0</td>
+  </tr>
 </table>
