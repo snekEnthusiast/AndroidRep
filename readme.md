@@ -14,4 +14,12 @@
     <td>calculator</td>
     <td>5.0</td>
   </tr>
+  <tr>
+    <td>lista zadan</td>
+    <td>?</td>
+  </tr>
+  <tr>
+    <td>zakupy</td>
+    <td>5.0</td>
+  </tr>
 </table>
