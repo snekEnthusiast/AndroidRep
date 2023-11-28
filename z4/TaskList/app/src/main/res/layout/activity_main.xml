@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="initvalue" type="String"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="1dp">
+
+                <EditText
+                    android:id="@+id/input_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="name"
+                    android:importantForAutofill="no"
+                    android:inputType="textCapSentences"
+                    tools:ignore="HardcodedText,LabelFor" />
+
+                <EditText
+                    android:id="@+id/input_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="desc"
+                    android:importantForAutofill="no"
+                    android:inputType="textCapSentences"
+                    tools:ignore="HardcodedText,LabelFor" />
+
+                <EditText
+                    android:id="@+id/input_date"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="date"
+                    android:importantForAutofill="no"
+                    android:inputType="date"
+                    tools:ignore="HardcodedText,LabelFor" />
+
+                <Button
+                    android:id="@+id/add"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="+"
+                    android:textSize="23dp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tasks"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

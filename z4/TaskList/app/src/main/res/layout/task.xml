@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/task_name"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:text="defaultName"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/task_desc"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:text="defaultDescription" />
+
+            <TextView
+                android:id="@+id/task_date"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:text="defaultDate" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/done_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#00cf00"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="✓" />
+
+        <View
+            android:layout_height="match_parent"
+            android:layout_width="4dp"
+            android:background="@android:color/white" />
+
+        <Button
+            android:id="@+id/del_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#df0000"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="X" />
+    </LinearLayout>
+</layout>

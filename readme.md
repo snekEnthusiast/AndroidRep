@@ -16,7 +16,7 @@
   </tr>
   <tr>
     <td>lista zadan</td>
-    <td>?</td>
+    <td>4.0</td>
   </tr>
   <tr>
     <td>zakupy</td>
