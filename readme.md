@@ -26,6 +26,6 @@
   </tr>
   <tr>
     <td>baza danych</td>
-    <td>4.5</td>
+    <td>5.0</td>
   </tr>
 </table>
