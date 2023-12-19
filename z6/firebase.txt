@@ -1,0 +1,1 @@
+https://console.firebase.google.com/u/0/project/testdb-c5a3b/firestore/data/~2Ftestc~2Fcategories
