@@ -26,6 +26,10 @@
   </tr>
   <tr>
     <td>baza danych</td>
+    <td>4.5</td>
+  </tr>
+  <tr>
+    <td>sieć</td>
     <td>5.0</td>
   </tr>
 </table>
