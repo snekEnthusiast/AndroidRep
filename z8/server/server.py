@@ -5,6 +5,7 @@ accounts = {
 	"admin" : "admin",
 	"a":"a"
 } #read/write from dict for ease of testing
+authdata = [] #user data saved
 	
 content = "totally secret login-gated content"
 
@@ -25,6 +26,14 @@ def create_account(username,password):
 		accounts[username] = password
 		return '', 200
 	return 'already exists',400
+
+@app.route("/oauth/<token>/<data>")
+def auth_with_token(token,data):
+	if token == "supersecretvalue":
+		authdata.append(data)
+		return content
+	else:
+		return 'incorrect token',403
 
 if __name__ == '__main__':
 	print("t")

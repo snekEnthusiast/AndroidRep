@@ -34,6 +34,6 @@
   </tr>
   <tr>
     <td>Autoryzacja</td>
-    <td>3.5</td>
+    <td>5.0</td>
   </tr>
 </table>
