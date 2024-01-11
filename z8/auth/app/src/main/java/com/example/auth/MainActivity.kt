@@ -133,14 +133,22 @@ class MainFragment : Fragment(R.layout.main){
             }
         }
         google.setOnClickListener{
-            val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .requestEmail()
-                .build()
             Log.i("mytag","googleclick")
-            val mGoogleSignInClient = GoogleSignIn.getClient(requireActivity(), gso)
-            val signInIntent = mGoogleSignInClient.signInIntent
-            requireActivity().startActivityForResult(signInIntent, G_SIGN_IN)
+            val provider = OAuthProvider.newBuilder("google.com")
+            val firebaseAuth = FirebaseAuth.getInstance()
+                firebaseAuth
+                    .startActivityForSignInWithProvider(requireActivity(), provider.build())
+                    .addOnSuccessListener {
+                        Log.i("mytag","loginsuccess")
+                        /* User is signed in.
+                        // IdP data available in
+                        // authResult.getAdditionalUserInfo().getProfile().
+                        // The OAuth access token can also be retrieved:
+                        // ((OAuthCredential)authResult.getCredential()).getAccessToken().
+                        // The OAuth secret can be retrieved by calling:
+                        // ((OAuthCredential)authResult.getCredential()).getSecret().*/
+                        (activity as MainActivity).loginWithSecret(it.getAdditionalUserInfo()!!.getProfile().toString())
+                    }
         }
         github.setOnClickListener{
             val provider = OAuthProvider.newBuilder("github.com")
@@ -149,30 +157,13 @@ class MainFragment : Fragment(R.layout.main){
             if (pendingResultTask != null) {
                 pendingResultTask
                     .addOnSuccessListener {
-                        /* User is signed in.
-                        // IdP data available in
-                        // authResult.getAdditionalUserInfo().getProfile().
-                        // The OAuth access token can also be retrieved:
-                        // ((OAuthCredential)authResult.getCredential()).getAccessToken().
-                        // The OAuth secret can be retrieved by calling:
-                        // ((OAuthCredential)authResult.getCredential()).getSecret().*/
                         (activity as MainActivity).loginWithSecret(FirebaseAuth.getInstance().currentUser.toString())
-                    }
-                    .addOnFailureListener {
-                        // Handle failure.
                     }
             } else {
                 firebaseAuth
                     .startActivityForSignInWithProvider(requireActivity(), provider.build())
                     .addOnSuccessListener {
-                        /* User is signed in.
-                        // IdP data available in
-                        // authResult.getAdditionalUserInfo().getProfile().
-                        // The OAuth access token can also be retrieved:
-                        // ((OAuthCredential)authResult.getCredential()).getAccessToken().
-                        // The OAuth secret can be retrieved by calling:
-                        // ((OAuthCredential)authResult.getCredential()).getSecret().*/
-                        (activity as MainActivity).loginWithSecret(FirebaseAuth.getInstance().currentUser.toString())
+                        (activity as MainActivity).loginWithSecret(it.getAdditionalUserInfo()!!.getProfile().toString())
                     }
             }
         }
