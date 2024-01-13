@@ -36,4 +36,8 @@
     <td>Autoryzacja</td>
     <td>5.0</td>
   </tr>
+  <tr>
+    <td>Płatności</td>
+    <td>4.5</td>
+  </tr>
 </table>
