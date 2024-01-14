@@ -48,4 +48,8 @@
     <td>docker</td>
     <td>5.0</td>
   </tr>
+  <tr>
+    <td>ktor</td>
+    <td>5.0</td>
+  </tr>
 </table>
