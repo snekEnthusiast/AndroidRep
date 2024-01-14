@@ -75,7 +75,7 @@ class FImpl{
 		plimit = row[Types.plimit]
 	)
 	suspend fun allTypes(): List<Type> = DatabaseFactory.dbQuery {
-		Products.selectAll().map(::resultRowToType)
+		Types.selectAll().map(::resultRowToType)
 	}
 	suspend fun addType(id:String, specs:String, perishable:Boolean, plimit:Int) = DatabaseFactory.dbQuery {
 		val insertStatement = Types.insert {

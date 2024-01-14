@@ -1,0 +1,3 @@
+services:
+  zadanie:
+    image: snekenjoyer/excrep

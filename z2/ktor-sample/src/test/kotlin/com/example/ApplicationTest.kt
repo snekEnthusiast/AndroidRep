@@ -21,9 +21,13 @@ class ApplicationTest {
             }
         }
         DatabaseFactory.init()
-        val response = client.post("db/product") {
+        /*val response = client.post("db/type") {
             contentType(ContentType.Application.Json)
-            setBody(Product(0, "name0", "type0", false))
+            setBody(Type("type0","specs0",false,10))
+        }*/
+        val response = client.delete("db/type"){
+            contentType(ContentType.Application.Json)
+            setBody("type0")
         }
         val v = client.get("db/product").apply{
             assertEquals(HttpStatusCode.OK, status)

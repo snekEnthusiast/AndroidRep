@@ -18,7 +18,7 @@
 <table cellspacing="0" cellpadding="0">
   <tr>
     <td>lista zadan</td>
-    <td>4.0</td>
+    <td>5.0</td>
   </tr>
   <tr>
     <td>zakupy</td>
@@ -39,5 +39,13 @@
   <tr>
     <td>Płatności</td>
     <td>4.5</td>
+  </tr>
+</table>
+
+### fixed (ungraded)
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <td>docker</td>
+    <td>5.0</td>
   </tr>
 </table>

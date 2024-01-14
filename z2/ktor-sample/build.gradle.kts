@@ -24,6 +24,7 @@ repositories {
 
 repositories {
     mavenCentral()
+    google()
 }
 
 
@@ -37,6 +38,11 @@ dependencies {
     implementation("io.ktor:ktor-server-content-negotiation:$ktor_version")
     implementation ("org.xerial:sqlite-jdbc:3.43.2.0")
     implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
+    implementation("io.ktor:ktor-server-cors:$ktor_version")
+    
+    implementation ("com.google.code.gson:gson:2.10.1")
+    implementation("io.ktor:ktor-server-cors-jvm:2.3.5")
+    
     testImplementation("io.ktor:ktor-server-test-host:$ktor_version")
     testImplementation("io.ktor:ktor-server-tests-jvm")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
