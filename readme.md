@@ -40,6 +40,10 @@
     <td>Płatności</td>
     <td>4.5</td>
   </tr>
+  <tr>
+    <td>Testy</td>
+    <td>4.5</td>
+  </tr>
 </table>
 
 ### fixed (ungraded)
